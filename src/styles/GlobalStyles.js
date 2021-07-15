@@ -1,16 +1,27 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
-  html {
-    height: 100%
+  * {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    padding: 0;
+    margin: 0;
   }
 
   body {
-    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+    font-family: 'PT Sans', sans-serif;
     height: 100%;
     margin: 0;
-    background-color: #feb300;
+    background-color: #F7B832;
   }
+
+  h1, h2, h3 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 900;
+    line-height: 1;
+}
 `;
 
-export { GlobalStyle }
+export { GlobalStyle };

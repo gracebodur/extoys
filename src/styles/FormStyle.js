@@ -1,4 +1,6 @@
 import styled, { css } from "styled-components";
+import { User, Lock } from "@styled-icons/boxicons-regular";
+import { Email } from "@styled-icons/material";
 
 const StyledFormWrapper = styled.div`
   display: flex;
@@ -34,9 +36,24 @@ const StyledInput = styled.input`
   ${sharedStyles}
 `;
 
+const StyledIcon = styled.i`
+  position: absolute;
+  margin: 5px;
+  background: url${({ icon }) => {
+    if (icon === "user") return User;
+    else if (icon === "email") return Email;
+    else if (icon === "password") return Lock;
+    else if (icon === "passwordConfirmation") return Lock;
+    else return "";
+  }};
+
+  width: 50px;
+  height: 50px;
+`;
+
 const StyledButton = styled.button`
   display: block;
-  background-color:#ff5e6c;
+  background-color: #4abdac;
   color: #fff;
   font-size: 0.9rem;
   border: 0;
@@ -48,19 +65,26 @@ const StyledButton = styled.button`
   box-sizing: border-box;
 
   &:hover {
-    background-color: #FF1D5C;
+    background-color: #32897c;
   }
 `;
 
 const StyledMessage = styled.h4`
-    position: relative;
-    min-height: 1em;
-    margin: 1em 0;
-    font-size: 0.9rem;
-    padding: 1em 1.5em;
-    line-height: 1.4285em;
-    color: rgba(0,0,0,.87);
-    text-align: center;
-`
+  position: relative;
+  min-height: 1em;
+  margin: 1em 0;
+  font-size: 0.9rem;
+  padding: 1em 1.5em;
+  line-height: 1.4285em;
+  color: rgba(0, 0, 0, 0.87);
+  text-align: center;
+`;
 
-export { StyledFormWrapper, StyledForm, StyledInput, StyledButton, StyledMessage }
+export {
+  StyledFormWrapper,
+  StyledForm,
+  StyledInput,
+  StyledIcon,
+  StyledButton,
+  StyledMessage,
+};
