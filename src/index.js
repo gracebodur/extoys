@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import { GlobalStyle } from '../src/styles/GlobalStyles'
+import GlobalStyle from './globalStyles';
 import Login from '../src/components/Auth/Login/Login'
 import Register from '../src/components/Auth/Register/Register'
 import reportWebVitals from './reportWebVitals';
