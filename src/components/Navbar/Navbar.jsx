@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaTimes, FaBars } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
+import { Button } from "../../globalStyles";
 import {
   Nav,
   NavbarContainer,
@@ -10,12 +11,27 @@ import {
   NavMenu,
   NavItem,
   NavLink,
+  NavItemBtn,
+  NavBtnLink,
 } from "./Navbar.elements";
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
+  const [button, setButton] = useState(true);
 
   const handleClick = () => setClick(!click);
+
+  const showButton = () => {
+    if (window.innerWidth <= 960) {
+      setButton(false);
+    } else {
+      setButton(true);
+    }
+  };
+
+  useEffect(() => {
+    showButton();
+  }, []);
 
   return (
     <>
@@ -42,9 +58,19 @@ const Navbar = () => {
               <NavItem>
                 <NavLink to="/login">Login</NavLink>
               </NavItem>
-              <NavItem>
-                <NavLink to="/register">Register</NavLink>
-              </NavItem>
+              <NavItemBtn>
+                {button ? (
+                  <NavBtnLink to="/register">
+                    <Button primary>Register</Button>
+                  </NavBtnLink>
+                ) : (
+                  <NavBtnLink to="/register">
+                    <Button fontBig primary>
+                      Register
+                    </Button>
+                  </NavBtnLink>
+                )}
+              </NavItemBtn>
             </NavMenu>
           </NavbarContainer>
         </Nav>
