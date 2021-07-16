@@ -3,10 +3,8 @@ import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import GlobalStyle from "./globalStyles";
 import reportWebVitals from "./reportWebVitals";
-import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/HomePage/Home";
-import Login from './components/Auth/Login/Login'
-import Register from './components/Auth/Register/Register'
+import { Login, Register, Navbar, Footer } from "./components";
 
 const Root = () => (
   <Router>
@@ -17,6 +15,7 @@ const Root = () => (
       <Route path="/login" component={Login} />
       <Route path="/register" component={Register} />
     </Switch>
+    <Footer/>
   </Router>
 );
 

@@ -1,2 +1,5 @@
+export { default as Login } from './Auth/Login/Login'
+export { default as Register } from './Auth/Register/Register'
 export { default as Navbar } from './Navbar/Navbar'
-export { default as InfoSection } from './InfoSection/InfoSection'
+export { default as ContentSection } from './ContentSection/ContentSection'
+export { default as Footer } from './Footer/Footer'
