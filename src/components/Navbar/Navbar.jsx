@@ -7,6 +7,9 @@ import {
   NavLogo,
   NavIcon,
   MobileIcon,
+  NavMenu,
+  NavItem,
+  NavLink,
 } from "./Navbar.elements";
 
 const Navbar = () => {
@@ -26,6 +29,23 @@ const Navbar = () => {
             <MobileIcon onClick={handleClick}>
               {click ? <FaTimes /> : <FaBars />}
             </MobileIcon>
+            <NavMenu onClick={handleClick} click={click}>
+              <NavItem>
+                <NavLink to="/">Home</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink to="/about">About</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink to="/toys">Toys</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink to="/login">Login</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink to="/register">Register</NavLink>
+              </NavItem>
+            </NavMenu>
           </NavbarContainer>
         </Nav>
       </IconContext.Provider>
