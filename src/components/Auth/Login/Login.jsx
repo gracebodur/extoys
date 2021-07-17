@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { StyledFormWrapper, StyledForm, StyledInput, StyledButton, StyledMessage } from '../../../styles/FormStyle'
+import { StyledFormWrapper, StyledForm, StyledInput, StyledButton, StyledMessage } from '../Form.elements'
 
 export default class Login extends Component {
     render() {

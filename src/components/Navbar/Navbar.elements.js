@@ -3,7 +3,7 @@ import { FaRobot } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { Container } from "../../globalStyles";
 
-export const Nav = styled.nav`
+const Nav = styled.nav`
   background: #101522;
   height: 80px;
   display: flex;
@@ -15,7 +15,7 @@ export const Nav = styled.nav`
   z-index: 999;
 `;
 
-export const NavbarContainer = styled(Container)`
+const NavbarContainer = styled(Container)`
   display: flex;
   justify-content: space-between;
   height: 80px;
@@ -23,7 +23,7 @@ export const NavbarContainer = styled(Container)`
   ${Container}
 `;
 
-export const NavLogo = styled(Link)`
+const NavLogo = styled(Link)`
   color: #fff;
   justify-self: flex-start;
   cursor: pointer;
@@ -33,11 +33,11 @@ export const NavLogo = styled(Link)`
   align-items: center;
 `;
 
-export const NavIcon = styled(FaRobot)`
+const NavIcon = styled(FaRobot)`
   margin: 0%.5rem;
 `;
 
-export const MobileIcon = styled.div`
+const MobileIcon = styled.div`
   display: none;
 
   @media screen and (max-width: 960px) {
@@ -51,7 +51,7 @@ export const MobileIcon = styled.div`
   }
 `;
 
-export const NavMenu = styled.ul`
+const NavMenu = styled.ul`
   display: flex;
   align-items: center;
   list-style: none;
@@ -71,7 +71,7 @@ export const NavMenu = styled.ul`
   }
 `;
 
-export const NavItem = styled.li`
+const NavItem = styled.li`
   height: 80px;
   border-bottom: 2px solid transparent;
 
@@ -88,7 +88,7 @@ export const NavItem = styled.li`
   }
 `;
 
-export const NavLink = styled(Link)`
+const NavLink = styled(Link)`
   color: #fff;
   display: flex;
   align-items: center;
@@ -109,7 +109,7 @@ export const NavLink = styled(Link)`
   }
 `;
 
-export const NavItemBtn = styled.li`
+const NavItemBtn = styled.li`
   @media screen and (max-width: 960px) {
     display: flex;
     justify-content: center;
@@ -119,7 +119,7 @@ export const NavItemBtn = styled.li`
   }
 `;
 
-export const NavBtnLink = styled(Link)`
+const NavBtnLink = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -130,3 +130,16 @@ export const NavBtnLink = styled(Link)`
   border: none;
   outline: none;
 `;
+
+export {
+  Nav,
+  NavbarContainer,
+  NavLogo,
+  NavIcon,
+  MobileIcon,
+  NavMenu,
+  NavItem,
+  NavLink,
+  NavItemBtn,
+  NavBtnLink
+}

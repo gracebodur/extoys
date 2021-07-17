@@ -6,7 +6,7 @@ import {
   StyledIcon,
   StyledButton,
   StyledMessage,
-} from "../../../styles/FormStyle";
+} from '../Form.elements';
 
 export default class Register extends Component {
   render() {
