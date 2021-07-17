@@ -1,42 +1,71 @@
-import React, { Component } from "react";
+import React from "react";
 import {
+  StyledFormContainer,
+  StyledCloseBtn,
+  StyledFormContentLeft,
+  StyledFormImg,
+  StyledFormContentRight,
   StyledFormWrapper,
   StyledForm,
+  StyledFormText,
+  StyledFormLabel,
   StyledInput,
-  StyledIcon,
   StyledButton,
-  StyledMessage,
-} from '../Form.elements';
+  StyledFormMessage,
+  LoginLink,
+} from "../Form.elements";
 
-export default class Register extends Component {
-  render() {
-    return (
-      <StyledFormWrapper>
+const Register = () => {
+  return (
+    <StyledFormContainer>
+      <StyledCloseBtn>x</StyledCloseBtn>
+      <StyledFormContentLeft>
+        <StyledFormImg></StyledFormImg>
+      </StyledFormContentLeft>
+      <StyledFormContentRight>
         <StyledForm>
-          <StyledIcon icon={"user"} title='user icon'/>
-          <StyledInput name="username" type="text"></StyledInput>
+          <StyledFormText>
+            Get started with us today! Create your account by filling out the
+            information below.
+          </StyledFormText>
+          <StyledFormWrapper>
+            <StyledFormLabel htmlFor="username"> Username</StyledFormLabel>
+            <StyledInput name="username" type="text"></StyledInput>
+          </StyledFormWrapper>
 
-          <StyledIcon icon={"email"} title='email icon'/>
-          <StyledInput name="email" type="email"></StyledInput>
+          <StyledFormWrapper>
+            <StyledFormLabel htmlFor="email">Email</StyledFormLabel>
+            <StyledInput name="email" type="email"></StyledInput>
+          </StyledFormWrapper>
 
-          <StyledIcon icon={"password"} title='lock icon'/>
-          <StyledInput
-            name="password"
-            type="password"
-            autoComplete="off"
-          ></StyledInput>
+          <StyledFormWrapper>
+            <StyledFormLabel htmlFor="password">Password</StyledFormLabel>
+            <StyledInput
+              name="password"
+              type="password"
+              autoComplete="off"
+            ></StyledInput>
+          </StyledFormWrapper>
 
-          <StyledIcon icon={"passwordConfirmation"} title='lock icon'/>
-          <StyledInput
-            name="passwordConfirmation"
-            type="password"
-            autoComplete="off"
-          ></StyledInput>
+          <StyledFormWrapper>
+            <StyledFormLabel htmlFor="passwordConfirmation">
+              Confirm Password
+            </StyledFormLabel>
+            <StyledInput
+              name="passwordConfirmation"
+              type="password"
+              autoComplete="off"
+            ></StyledInput>
+          </StyledFormWrapper>
 
           <StyledButton>Submit</StyledButton>
-          <StyledMessage>Already have an account? Login</StyledMessage>
+          <StyledFormMessage>
+            Already have an account? <LoginLink to="/login">Login</LoginLink>
+          </StyledFormMessage>
         </StyledForm>
-      </StyledFormWrapper>
-    );
-  }
-}
+      </StyledFormContentRight>
+    </StyledFormContainer>
+  );
+};
+
+export default Register;
