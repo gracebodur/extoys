@@ -11,8 +11,22 @@ import {
   FooterLinksItems,
   FooterLinkTitle,
   FooterLink,
+  SocialMedia,
+  SocialMediaWrapper,
+  SocialLogo,
+  SocialIcon,
+  WebsiteRights,
+  SocialIcons,
+  SocialIconLink,
 } from "./Footer.elements";
 import { Button } from "../../globalStyles";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+  FaYoutube,
+} from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -36,6 +50,15 @@ const Footer = () => {
             <FooterLink to="/register">Terms of Service</FooterLink>
           </FooterLinksItems>
           <FooterLinksItems>
+            <FooterLinkTitle>Videos</FooterLinkTitle>
+            <FooterLink to="/register">How it works</FooterLink>
+            <FooterLink to="/">Testimonials</FooterLink>
+            <FooterLink to="/register">Terms of Service</FooterLink>
+          </FooterLinksItems>
+        </FooterLinksWrapper>
+
+        <FooterLinksWrapper>
+          <FooterLinksItems>
             <FooterLinkTitle>Contact Us</FooterLinkTitle>
             <FooterLink to="/register">How it works</FooterLink>
             <FooterLink to="/">Testimonials</FooterLink>
@@ -49,6 +72,56 @@ const Footer = () => {
           </FooterLinksItems>
         </FooterLinksWrapper>
       </FooterLinksContainer>
+      <SocialMedia>
+        <SocialMediaWrapper>
+          <SocialLogo to="/">
+            <SocialIcon /> EXTOYS
+          </SocialLogo>
+          <WebsiteRights>EXTOYS © 2021</WebsiteRights>
+          <SocialIcons>
+            <SocialIconLink
+              href="https://www.facebook.com/"
+              target="_blank"
+              aria-label="Facebook"
+              rel="noopener noreferrer"
+            >
+              <FaFacebook />
+            </SocialIconLink>
+            <SocialIconLink
+              href="https://www.instagram.com/"
+              target="_blank"
+              aria-label="Instagram"
+              rel="noopener noreferrer"
+            >
+              <FaInstagram />
+            </SocialIconLink>
+            <SocialIconLink
+              href="https://www.youtube.com/"
+              target="_blank"
+              aria-label="Youtube"
+              rel="noopener noreferrer"
+            >
+              <FaYoutube />
+            </SocialIconLink>
+            <SocialIconLink
+              href="https://twitter.com/"
+              target="_blank"
+              aria-label="Twitter"
+              rel="noopener noreferrer"
+            >
+              <FaTwitter />
+            </SocialIconLink>
+            <SocialIconLink
+              href="https://www.linkedin.com/"
+              target="_blank"
+              aria-label="LinkedIn"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedin />
+            </SocialIconLink>
+          </SocialIcons>
+        </SocialMediaWrapper>
+      </SocialMedia>
     </FooterContainer>
   );
 };

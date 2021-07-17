@@ -1,3 +1,4 @@
+import { FaRobot } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
@@ -101,6 +102,7 @@ export const FooterLinksItems = styled.div`
 export const FooterLinkTitle = styled.h2`
   margin-bottom: 16px;
 `;
+
 export const FooterLink = styled(Link)`
   color: #1c2237;
   text-decoration: none;
@@ -108,6 +110,60 @@ export const FooterLink = styled(Link)`
 
   &:hover {
     color: #0467fb;
+    transition: 0ms.3s ease-out;
+  }
+`;
+
+export const SocialMedia = styled.section`
+  max-width: 1000px;
+  width: 100%;
+`;
+
+export const SocialMediaWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto 0 auto;
+
+  @media screen and (max-width: 820px) {
+    flex-direction: column;
+  }
+`;
+
+export const SocialLogo = styled(Link)`
+  color: #101522;
+  justify-self: start;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+`;
+
+export const SocialIcon = styled(FaRobot)`
+  margin-right: 10px;
+`;
+
+export const WebsiteRights = styled.small`
+  margin-bottom: 16px;
+`;
+
+export const SocialIcons = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 240px;
+`;
+
+export const SocialIconLink = styled.a`
+  color: #101522;
+  font-size: 24px;
+
+  &:hover {
+    color: #4B59F7;
     transition: 0ms.3s ease-out;
   }
 `;
