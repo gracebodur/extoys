@@ -1,25 +1,54 @@
-import React, { Component } from 'react'
-// import { StyledFormWrapper, StyledForm, StyledInput, StyledButton, StyledMessage } from '../Form.elements'
+import React from "react";
+import {
+  StyledFormContainer,
+  StyledCloseBtn,
+  StyledFormContentLeft,
+  StyledFormImg,
+  StyledFormContentRight,
+  StyledFormWrapper,
+  StyledForm,
+  StyledFormText,
+  StyledFormLabel,
+  StyledInput,
+  StyledButton,
+  StyledFormMessage,
+  LoginLink,
+} from "../Form.elements";
 
-export default class Login extends Component {
-    render() {
-        return (
-            <h1>login</h1>
-            // <StyledFormWrapper>
-            //     <StyledForm>
-            //         <StyledInput name="email"
-            //             placeholder="Email Address"
-            //             type="email">
-            //         </StyledInput>
+const Login = () => {
+  return (
+    <StyledFormContainer>
+      <StyledCloseBtn>x</StyledCloseBtn>
+      <StyledFormContentLeft>
+        <StyledFormImg></StyledFormImg>
+      </StyledFormContentLeft>
+      <StyledFormContentRight>
+        <StyledForm>
+          <StyledFormText>
+            Welcome Back!
+          </StyledFormText>
+          <StyledFormWrapper>
+            <StyledFormLabel htmlFor="email">Email</StyledFormLabel>
+            <StyledInput name="email" type="email"></StyledInput>
+          </StyledFormWrapper>
 
-            //         <StyledInput name="password"
-            //             placeholder="Password"
-            //             type="password">
-            //         </StyledInput>
-            //         <StyledButton>Submit</StyledButton>
-            //         <StyledMessage>Don't have an account? Register</StyledMessage>
-            //     </StyledForm>
-            // </StyledFormWrapper>
-        )
-    }
-}
+          <StyledFormWrapper>
+            <StyledFormLabel htmlFor="password">Password</StyledFormLabel>
+            <StyledInput
+              name="password"
+              type="password"
+              autoComplete="off"
+            ></StyledInput>
+          </StyledFormWrapper>
+          <StyledButton>Submit</StyledButton>
+          <StyledFormMessage>
+            Don't have an account?{" "}
+            <LoginLink to="/register">Register</LoginLink>
+          </StyledFormMessage>
+        </StyledForm>
+      </StyledFormContentRight>
+    </StyledFormContainer>
+  );
+};
+
+export default Login;
